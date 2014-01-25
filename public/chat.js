@@ -33,7 +33,7 @@ var ChatRoom = Backbone.View.extend({
         });
         this.pushChannel = new PushChannel({
           name: this.roomName,
-          socketUrl: "http://jtupiter.com:3030/push"
+          socketUrl: "http://localhost:3030/push"
         });
         this.pushChannel.on("message", function(message) {
           that.messages.add([JSON.parse(message)]);
